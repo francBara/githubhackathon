@@ -10,26 +10,11 @@ import lmntAPI from "../API/api";
  */
 const VoiceCard = ({ voice, onVoiceSelected }) => {
     return (
-      <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 m-8" onClick={() => {
+      <div className="flex flex-row bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 cursor-pointer items-center p-4 mb-2" onClick={() => {
         onVoiceSelected(voice.name);
       }}>
-        <div className="p-6">
-          <div className="flex items-center space-x-3 mb-4">
-            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 text-lg font-semibold">
-              {voice.gender === 'M' ? '♂️' : '♀️'}
-            </div>
-            <h2 className="text-xl font-semibold text-gray-800">{voice.name}</h2>
-          </div>
-          <p className="text-gray-600 mb-4">{voice.description}</p>
-          <div className="hidden flex space-x-2">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
-              Listen
-            </button>
-            <img>
-              {voice.imageUrl}
-            </img>
-          </div>
-        </div>
+        <h2 className="text-xl font-semibold text-gray-800 mr-4">{voice.name}</h2>
+        <p className="text-gray-600">{voice.description}</p>
       </div>
     );
   };
@@ -50,9 +35,11 @@ function ChooseVoices({onVoiceSelected}) {
     }, [])
 
     return (
-        <div>
-            Voices
-            <div className="h-64 overflow-auto border-2">
+        <div className="border-2">
+            <div className="text-xl font-semibold mb-4">
+                Voices
+            </div>
+            <div className="h-64 overflow-auto">
             {
                 voices &&
                 voices.map((voice) => {
