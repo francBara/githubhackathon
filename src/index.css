@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "Montserrat";
+	/*src: url(../public/fonts/malik.ttf);
+  */
+}
+
+* {
+    /*border: solid 0.1px blue;
+  /*font-family: 'Raleway', sans-serif;*/
+}
+
+.upshadow {
+    --tw-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 -2px 4px -2px rgba(0, 0, 0, 0.1);
+    --tw-shadow-colored: 0 -4px 6px -1px var(--tw-shadow-color),
+        0 -2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.inner-shadow{
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0), inset 0 -4px 6px rgba(0, 0, 0);
+}
+
+html {
+    background-color: #fff;
+}
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+*::selection {
+    background: #9fc909;
+    color: beige;
+}
+
+input:focus {
+    outline: #9fc909;
+}
+
+.concave-border {
+    background: radial-gradient(30px at 50% 0%, #0000 98%, white) 50%
+            calc(100% - 0px) / 100vw 100% no-repeat,
+        transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.custom-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black !important;
+    scale: 1.5 !important;
+}
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type="range"].istyle {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    position: relative;
+}
+
+input[type="range"].istyle:focus {
+    outline: none;
+}
+
+input[type="range"].istyle::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #b2b2b2;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+input[type="range"].istyle::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #8fbb3b;
+    cursor: pointer;
+    margin-top: -10px; /* Centratura verticale del thumb rispetto al track */
+    box-shadow: none; /* Rimuove l'ombra */
+    position: relative;
+    z-index: 2;
+}
+
+input[type="range"].istyle::-moz-range-thumb {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #8fbb3b;
+    cursor: pointer;
+    box-shadow: none; /* Rimuove l'ombra */
+}
+
+input[type="range"].istyle::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #b2b2b2;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+input[type="range"].istyle::-moz-range-progress {
+    background: #8fbb3b;
+    height: 5px;
+    border-radius: 10px;
+}
+
+input[type="range"].istyle::-ms-thumb {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #8fbb3b;
+    cursor: pointer;
+    box-shadow: none; /* Rimuove l'ombra */
+    position: relative;
+    z-index: 2;
+}
+
+input[type="range"].istyle::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: transparent; /* Nasconde la traccia predefinita */
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type="range"].istyle::-ms-fill-lower {
+    background: #8fbb3b;
+    border-radius: 10px;
+}
+
+input[type="range"].istyle::-ms-fill-upper {
+    background: #b2b2b2;
+    border-radius: 10px;
+}
+
+/* Pseudo-element for the green track */
+input[type="range"].istyle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: #8fbb3b;
+    border-radius: 10px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.drop-shadow-lvl {
+    --tw-drop-shadow: drop-shadow(0 7px 7px rgba(0, 0, 0, 0.256))
+        drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+        var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+        var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+
+/* Per i browser WebKit (Chrome, Safari) */
+.elemento-scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+/* Per Firefox */
+.elemento-scrollable {
+    scrollbar-width: none;
+}
+
+/* Per Internet Explorer e Edge */
+.elemento-scrollable {
+    -ms-overflow-style: none;
+}
+
+/* DraggableList */
+
+.sortable-list {
+    width: 425px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 13px 46px rgba(0, 0, 0, 0.1);
+}
+
+.add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.sortable-list .item {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    list-style: none;
+    display: flex;
+    cursor: move;
+    background: #ffffff;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item i {
+    color: #474747;
+    font-size: 1.13rem;
+}
+
+.item.dragging {
+    opacity: 0.6;
+}
+
+.item.dragging .details,
+.item.dragging i {
+    opacity: 0.8;
+    transform: scale(1.02);
+    background: #f0f0f0;
+}
