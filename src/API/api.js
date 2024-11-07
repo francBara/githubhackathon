@@ -11,7 +11,9 @@ const lmntAPI = {
     getVoices: async () => {
         const voices = await speech.fetchVoices();
         return voices;
-    }
+    },
+
+    
 
 };
 
