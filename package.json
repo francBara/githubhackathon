@@ -21,6 +21,7 @@
     "firebase": "^10.12.4",
     "flowbite": "^2.4.1",
     "framer-motion": "^11.3.17",
+    "lmnt-node": "^1.2.3",
     "loadable-image": "^3.2.3",
     "md5": "^2.3.0",
     "moment": "^2.30.1",
