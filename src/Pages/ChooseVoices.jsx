@@ -8,9 +8,11 @@ import lmntAPI from "../API/api";
  * @param {import("lmnt-node").Voice} props.voice
  * @returns 
  */
-const VoiceCard = ({ voice }) => {
+const VoiceCard = ({ voice, onVoiceSelected }) => {
     return (
-      <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+      <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 m-8" onClick={() => {
+        onVoiceSelected(voice.name);
+      }}>
         <div className="p-6">
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 text-lg font-semibold">
@@ -19,7 +21,7 @@ const VoiceCard = ({ voice }) => {
             <h2 className="text-xl font-semibold text-gray-800">{voice.name}</h2>
           </div>
           <p className="text-gray-600 mb-4">{voice.description}</p>
-          <div className="flex space-x-2">
+          <div className="hidden flex space-x-2">
             <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
               Listen
             </button>
@@ -32,7 +34,7 @@ const VoiceCard = ({ voice }) => {
     );
   };
 
-function ChooseVoices() {
+function ChooseVoices({onVoiceSelected}) {
     /**
      * @type {[import("lmnt-node").VoicesResponse, function]}
      */
@@ -49,12 +51,15 @@ function ChooseVoices() {
 
     return (
         <div>
+            Voices
+            <div className="h-64 overflow-auto border-2">
             {
                 voices &&
                 voices.map((voice) => {
-                    return <VoiceCard voice={voice}/>;
+                    return <VoiceCard voice={voice} onVoiceSelected={onVoiceSelected}/>;
                 })
             }
+            </div>
         </div>
     );
 }
